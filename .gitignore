@@ -1,0 +1,9 @@
+#General
+.DS_Store
+
+#depenenies
+node_modules/
+
+
+#output from webpack
+dist/
