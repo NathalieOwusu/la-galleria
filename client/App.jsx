@@ -1,12 +1,22 @@
 import React from 'react'
-import LoginIn from './pages/LoginIn';
-
+<<<<<<< HEAD
+import Login from './pages/LoginIn';
+const App = () => {
+  const [selectedCard, setSelectedCard] = useState(null)
+  const handleCardClick = (cardTitle) => {
+    setSelectedCard(cardTitle);
+  }
+  return (
+    <div>
+      <Login />
+    </div>
+=======
+import User from './User'
 
 const App = () => {
   return (
-    <div>
-     <LoginIn />
-      </div>
+    <div>Welcome to our React App! </div>
+>>>>>>> 6914adac5c126aa6848c06154fecb65f5b93430e
   )
 };
 
