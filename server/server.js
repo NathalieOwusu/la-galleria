@@ -1,20 +1,30 @@
 const express = require('express');
 const connectDB = require('./utils/database');
+const cors = require('cors')
+
+const authRoutes = require('./routes/authRoutes');
+const artworkRoutes = require('./routes/artworkRoutes');
+
 const app = express();
 
+
 // connect to MongoDB
-connectDB();
+
 
 //Middleware
 app.use(express.json());
+app.use(cors());
 
-// Test Route
-app.get('/', (req, res)=>{
-  res.send('MongoDB is connected!')
-});
+
+//Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/artworks', artworkRoutes);
+
+
+
 
 //start server
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`server running on port ${PORT}`);
+  console.log(`server running on http://localhost: ${PORT}`);
 })
