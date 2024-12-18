@@ -1,18 +1,25 @@
-import React from 'react'
-<<<<<<< HEAD
-import Login from './pages/LoginIn';
-const App = () => {
-  return (
-    <div>
-      <Login />
-    </div>
-=======
-import User from './User'
+import React, { useState } from 'react'
+import Gallery from './pages/Gallery'
+import Card from './components/GalleryCard'
+import './index.css'
+
+
 
 const App = () => {
+  const [selectedCard, setSelectedCard] = useState(null)
+  const handleCardClick = (cardTitle) => {
+    setSelectedCard(cardTitle);
+  }
   return (
-    <div>Welcome to our React App! </div>
->>>>>>> 6914adac5c126aa6848c06154fecb65f5b93430e
+    <div>
+    <Card title='Card 1' content='content for card 1' onClick= {() => handleCardClick('Card 1')} />
+    <Card title='Card 2' content='content for card 2' onClick= {() => handleCardClick('Card 2')} />
+    <Card title='Card 3' content='content for card 3' onClick= {() => handleCardClick('Card 3')} />
+    <Card title='Card 4' content='content for card 4' onClick= {() => handleCardClick('Card 4')} />
+    <Gallery />
+    {selectedCard }
+     </div>
+  
   )
 }
 

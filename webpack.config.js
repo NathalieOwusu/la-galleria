@@ -17,10 +17,12 @@ module.exports = {
         static: {
             directory: path.resolve(__dirname, 'dist'),
         },
-        hot: true,
+        //hot: true,
         open: true,
         historyApiFallback: true,
         headers: {'Access-Control-Allow-Origin': '*'},
+        liveReload: false,
+        hot: false, 
         proxy: [
             {
                 context: ['/api'],
