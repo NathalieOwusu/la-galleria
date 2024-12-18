@@ -9,6 +9,7 @@ const Card = ({ title, content, onClick}) => {
       <p>{ content }</p>
     </div>
     );
+    
 };
 
 export default Card;
