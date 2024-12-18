@@ -1,5 +1,7 @@
 import React from 'react'
 import Login from './pages/LoginIn';
+import Card from './components/GalleryCard';
+import Modal from './components/Modal';
 
 const App = () => {
   const [selectedCard, setSelectedCard] = useState(null)
@@ -13,9 +15,9 @@ const App = () => {
     setSelectedCard(null);
   }
   return (
-    <div>
+   <>
       <Login />
-    </div>
+    
     <div className = 'container'>
     <Card title='Card 1' content='content for card 1' onClick= {() => handleCardClick('Card 1')} />
     <Card title='Card 2' content='content for card 2' onClick= {() => handleCardClick('Card 2')} />
@@ -29,6 +31,7 @@ const App = () => {
 />
     )}
      </div>
+     </>
   
   )
 }
