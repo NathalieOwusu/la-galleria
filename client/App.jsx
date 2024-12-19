@@ -1,16 +1,21 @@
-import React from 'react'
-import Login from './pages/LoginIn';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
+import GalleryPage from './pages/GalleryPage';
 
 const App = () => {
-  const [selectedCard, setSelectedCard] = useState(null)
-  const handleCardClick = (cardTitle) => {
-    setSelectedCard(cardTitle);
-  }
   return (
-    <div>
-      <Login />
-    </div>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<SignupForm />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
