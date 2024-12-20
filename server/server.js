@@ -8,7 +8,7 @@ const run = require('./utils/database');
 
 const app = express();
 
-
+// Connect to the database 
 mongoose
   .connect('mongodb+srv://daisha:lagalleria@cluster61478.qdaebge.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster61478')
   .then(() => {

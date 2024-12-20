@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
 import GalleryPage from './pages/GalleryPage';
+import './index.css';
+
 
 const App = () => {
   return (

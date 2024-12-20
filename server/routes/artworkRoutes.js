@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/fetch', async (req, res) => {
   try {
     // Fetch data from the Art Institute API
-    const response = await fetch('https://api.artic.edu/api/v1/artworks');
+    const response = await fetch('https://api.artic.edu/api/v1/artworks?limit=100');
     const data = await response.json();
 
     if (response.ok) {
