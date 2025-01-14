@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-
-
 const artworkSchema = new mongoose.Schema({
   title:{ type: String, required: true},
   artist: { type: String },
