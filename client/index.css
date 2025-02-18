@@ -278,10 +278,9 @@ body{
   font-size: 2rem;
   color: #5e503f;
 }
-    position: relative;
-    top: 30vh;
+
     
-}
+
 .card h2, p{
   text-align: center;
   color: black;
