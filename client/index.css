@@ -1,4 +1,5 @@
 body{
+  background: linear-gradient(to bottom, #fdfcf4, #f6f3eb);
   background-color: #ffff;
 }
 /*card styles*/
@@ -21,6 +22,262 @@ body{
     flex-direction: row;
     flex-wrap:nowrap;
     justify-content: flex-start;
+    align-items: normal;
+
+    
+}
+
+/* HomePage Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #2C2C2C;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.login-link {
+  background-color: #3ba99c;
+  color: white;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  background-color: #21897E;
+  transform: scale(1.05);
+}
+
+.signup-link {
+  background-color: #7ebce6;
+  color: white;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  background-color: #8980f5;
+  transform: scale(1.05);
+}
+
+/* Login Forms */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-form {
+  background-color: #ffffff;
+  border: 1px solid #dcd2c5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 1.8rem;
+  color: #5e503f;
+  margin-bottom: 1rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #dcd2c5;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fdfcfb;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #5e503f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #3b3b28;
+}
+
+
+/* Sign Up Forms */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.signup-form {
+  background-color: #ffffff;
+  border: 1px solid #dcd2c5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-form h2 {
+  font-size: 1.8rem;
+  color: #5e503f;
+  margin-bottom: 1rem;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #dcd2c5;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fdfcfb;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #5e503f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #3b3b28;
+}
+
+/* Gallery */
+.gallery-page {
+  padding: 2rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.search-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #5e503f;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #3b3b28;
+}
+
+.results-container {
+  text-align: center;
+}
+
+.search-status {
+  color: #777;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.artwork-grid, .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.artwork-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.artwork-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.artwork-card:hover {
+  transform: translateY(-5px);
+}
+
+.artwork-card h3 {
+  font-size: 1.2rem;
+  color: #5e503f;
+}
+
+.artwork-card p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #5e503f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #3b3b28;
+}
+
+.gallery-header {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #5e503f;
+}
     position: relative;
     top: 30vh;
     

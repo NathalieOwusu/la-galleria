@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "client": "webpack serve --config webpack.config.js",
     "server": "nodemon server/server.js"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/daishadavis/la-galleria#readme",
   "dependencies": {
+    "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.21.2",
@@ -27,7 +28,9 @@
     "mongoose": "^8.9.1",
     "node-fetch": "^3.3.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
