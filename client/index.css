@@ -1,26 +1,15 @@
 body{
   background: linear-gradient(to bottom, #fdfcf4, #f6f3eb);
-  background-color: #ffff;
 }
-/*card styles*/
 .card {
-    padding: 50px;
-    margin: 30px;
-    width: 520px;
-    height: 500px;
+    padding: 20px;
+    margin: 10px;
     border: 1px solid rgb(0, 0, 0);
     cursor: pointer;
     color: red;
-    box-sizing: border-box;
-    
-    
-}/* container that holds the cards*/
-.container{
     display: flex;
-    gap:10px;
-    margin: 20px;
     flex-direction: row;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     justify-content: flex-start;
     align-items: normal;
 
@@ -277,65 +266,4 @@ body{
   text-align: center;
   font-size: 2rem;
   color: #5e503f;
-}
-
-    
-
-.card h2, p{
-  text-align: center;
-  color: black;
-}
-.AddGallery{
-  bottom: 90vh;
-  right: 5vh;
-  border-radius: 10px;
-  position: absolute;
-  padding: 15px;
-  background-color: black;
-  color: #ffff;
-  cursor: pointer;
-  box-shadow: 1px 2px 5px grey;
-}
-.AddGallery:hover{
- transition: 0.4s;
- background-color: rgb(83, 81, 81);
-}
-.AddGallery:active{
- transition: 0.4s;
- background-color: rgb(223, 223, 223);
-}
-
-
-.modal-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* Modal content */
-.modal {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  max-width: 90%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  position: relative;
-}
-
-/* Close button */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
 }
