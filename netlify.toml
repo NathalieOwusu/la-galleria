@@ -1,5 +1,8 @@
+[build]
+  command = "npm run build"  # Ensure this is your actual build command
+  publish = "dist"  # Change this if your build output directory is different
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
