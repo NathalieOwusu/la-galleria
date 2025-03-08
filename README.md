@@ -1,4 +1,4 @@
-# la-galleria
+# La-galleria
 La Galleria - Project Setup
 A brief description of the project.
 
