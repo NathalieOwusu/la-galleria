@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
   entry: "./client/index.js",
   output: {
@@ -17,16 +16,15 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, "dist"),
     },
-    //hot: true,
     open: true,
-    historyApiFallback: true,
+    historyApiFallback: true, // Important for SPA routing
     headers: { "Access-Control-Allow-Origin": "*" },
     liveReload: false,
     hot: false,
     proxy: [
       {
         context: ["/api"],
-        target: "http://localhost:3000",
+        target: "http://localhost:8888", // Updated to match the backend server port
         secure: false,
         changeOrigin: true,
       },
@@ -61,25 +59,5 @@ module.exports = {
   ],
   resolve: {
     extensions: [".js", ".jsx"],
-  },
-  devServer: {
-    host: "localhost",
-    port: 8080,
-    static: {
-      directory: path.resolve(__dirname, "dist"),
-    },
-    open: true,
-    historyApiFallback: true, // This is important for SPA routing
-    headers: { "Access-Control-Allow-Origin": "*" },
-    liveReload: false,
-    hot: false,
-    proxy: [
-      {
-        context: ["/api"],
-        target: "http://localhost:3000",
-        secure: false,
-        changeOrigin: true,
-      },
-    ],
   },
 };
