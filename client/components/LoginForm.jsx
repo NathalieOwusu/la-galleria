@@ -10,7 +10,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+   
     try {
       const response = await fetch(`/api/auth/login`, {
         method: 'POST',
@@ -20,8 +20,8 @@ const LoginForm = () => {
 
       if (response.ok) {
         const { token } = await response.json();
-        localStorage.setItem('token', token); // Store token in localStorage
-        navigate('/gallery'); // Redirect to gallery page
+        localStorage.setItem('token', token); 
+        navigate('/gallery'); 
       } else {
         const { error } = await response.json();
         setError(error);
