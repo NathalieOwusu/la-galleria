@@ -21,3 +21,19 @@ export const fetchData = async () => {
     throw error; 
   }
 };
+
+// Function to login using POST request
+export const login = async (username, password) => {
+  try {
+    // POST request using axios to login
+    const response = await axios.post(`${API_URL}/api/auth/login`, {
+      username,
+      password,
+    });
+
+    return response.data;  // Return the data from the response 
+  } catch (error) {
+    console.error("Error logging in:", error);
+    throw error; 
+  }
+};
