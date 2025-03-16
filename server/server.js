@@ -27,7 +27,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/artworks', artworkRoutes);
 
 app.get('/api/data', (req, res) => {
-  res.json({ data: 'data' }); // Ensure you send a valid JSON response
+  res.json({ data }); // Ensure you send a valid JSON response
 });
 
 
