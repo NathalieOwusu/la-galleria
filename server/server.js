@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const authRoutes = require('./routes/authRoutes');
 const artworkRoutes = require('./routes/artworkRoutes');
-
+const api = require('./routes/services/api.js')
 const app = express();
 
 // Connect to the database 
@@ -27,9 +27,16 @@ app.use(cors({
 app.use('/api/auth', authRoutes);
 app.use('/api/artworks', artworkRoutes);
 
-app.get('/api/data', (req, res) => {
-  res.json({ data }); // Ensure you send a valid JSON response
+app.get('/api/data', async (req, res) => {
+  try {
+    const data = await api.fetchData(); // Assuming api.fetchData() is an async function
+    res.json({ data }); 
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    res.status(500).json({ message: "Error fetching data" });
+  }
 });
+
 
 
 

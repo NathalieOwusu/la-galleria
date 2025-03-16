@@ -5,7 +5,7 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import GalleryPage from "./pages/GalleryPage";
 import "./index.css";
-import { fetchData } from "./services/api.js"; 
+import { fetchData } from "../server/routes/services/api.js"; 
 
 
 const App = () => {
