@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');  // Ensure you import webpack
 
 module.exports = {
   entry: "./client/index.js",
@@ -55,6 +56,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./client/index.html",
+    }),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_BACKEND_URL': JSON.stringify(process.env.REACT_APP_BACKEND_URL),
+      'process.env.REACT_APP_SERVER_IP_1': JSON.stringify(process.env.REACT_APP_SERVER_IP_1),
+      'process.env.REACT_APP_SERVER_IP_2': JSON.stringify(process.env.REACT_APP_SERVER_IP_2),
+      'process.env.REACT_APP_SERVER_IP_3': JSON.stringify(process.env.REACT_APP_SERVER_IP_3),
     }),
   ],
   resolve: {
