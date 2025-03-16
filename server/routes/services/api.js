@@ -2,13 +2,14 @@ import axios from 'axios';
 
 // List of server IPs (as fallback options if needed)
 const serverIPs = [
-  '35.160.120.126',
-  '44.233.151.27',
-  '34.211.200.85'
+  process.env.REACT_APP_SERVER_IP_1,
+  process.env.REACT_APP_SERVER_IP_2,
+  process.env.REACT_APP_SERVER_IP_3
 ];
 
-// Define API_URL using the environment variable or fallback options
-const API_URL = process.env.REACT_APP_BACKEND_URL || (serverIPs[0] ? `https://${serverIPs[0]}` : 'http://localhost:3000');
+
+// using the environment variable or fallback options
+const API_URL = process.env.REACT_APP_BACKEND_URL || (serverIPs[0] ? `https://${serverIPs[0]}` : 'http://localhost:8888');
 
 // Function to fetch data from the API
 export const fetchData = async () => {
@@ -24,7 +25,7 @@ export const fetchData = async () => {
 // Function to login using POST request
 export const login = async (username, password) => {
   try {
-    const response = await axios.post(`${API_URL}/api/auth/login`, {  
+    const response = await axios.post(`${FRONTEND_URL}/api/auth/login`, {  
       username,
       password,
     });

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors')
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const authRoutes = require('./routes/authRoutes');
 const artworkRoutes = require('./routes/artworkRoutes');
@@ -8,12 +9,12 @@ const api = require('./routes/services/api.js')
 const app = express();
 
 // Connect to the database 
-mongoose
-  .connect('mongodb+srv://daisha:lagalleria@cluster61478.qdaebge.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster61478')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Connected to MongoDB');
   })
   .catch((err) => console.error('MongoDB connection error:', err));
+
 
 
 //Middleware
