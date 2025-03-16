@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 
 const authRoutes = require('./routes/authRoutes');
 const artworkRoutes = require('./routes/artworkRoutes');
-const run = require('./utils/database');
 
 const app = express();
 
@@ -19,7 +18,9 @@ mongoose
 
 //Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://la-galleria.netlify.app',  // Allow your frontend domain
+}));
 
 
 //Routes

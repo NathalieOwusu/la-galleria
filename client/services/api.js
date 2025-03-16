@@ -14,7 +14,7 @@ const API_URL = process.env.REACT_APP_BACKEND_URL || (serverIPs[0] ? `https://${
 export const fetchData = async () => {
   try {
     // Make GET request using axios
-    const response = await axios.get(`${API_URL}/api/data`);
+    const response = await axios.get(`${API_URL}/api/auth/login`, { username, password });
     return response.data;  
   } catch (error) {
     console.error("Error fetching data:", error); 
