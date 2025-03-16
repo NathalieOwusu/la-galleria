@@ -19,7 +19,9 @@ mongoose
 //Middleware
 app.use(express.json());
 app.use(cors({
-  origin: 'https://la-galleria.netlify.app',  // Allow your frontend domain
+  origin: 'https://la-galleria.netlify.app',  // frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
 }));
 
 

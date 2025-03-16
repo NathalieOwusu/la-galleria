@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -11,7 +12,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('api/auth/login', {
+      const response = await fetch(`/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
@@ -52,5 +53,6 @@ const LoginForm = () => {
     </div>
   );
 };
+
 
 export default LoginForm;

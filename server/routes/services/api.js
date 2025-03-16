@@ -9,7 +9,7 @@ const serverIPs = [
 
 // Define API_URL using serverIPs[0] as fallback, or local server if both fail
 const API_URL = process.env.REACT_APP_BACKEND_URL || (serverIPs[0] ? `https://${serverIPs[0]}` : 'http://localhost:3000');
-
+const FRONTEND_URL = process.env.REACT_APP_FRONTEND_URL
 // Function to fetch data from the API
 export const fetchData = async () => {
   try {
@@ -26,7 +26,7 @@ export const fetchData = async () => {
 export const login = async (username, password) => {
   try {
     // POST request using axios to login
-    const response = await axios.post(`${API_URL}/api/auth/login`, {
+    const response = await axios.post(`${FRONTEND_URL}/api/auth/login`, {
       username,
       password,
     });

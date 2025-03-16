@@ -59,6 +59,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.REACT_APP_BACKEND_URL': JSON.stringify(process.env.REACT_APP_BACKEND_URL),
+      'process.env.REACT_APP_FRONTEND_URL': JSON.stringify(process.env.REACT_APP_BACKEND_URL),
       'process.env.REACT_APP_SERVER_IP_1': JSON.stringify(process.env.REACT_APP_SERVER_IP_1),
       'process.env.REACT_APP_SERVER_IP_2': JSON.stringify(process.env.REACT_APP_SERVER_IP_2),
       'process.env.REACT_APP_SERVER_IP_3': JSON.stringify(process.env.REACT_APP_SERVER_IP_3),
