@@ -25,7 +25,7 @@ export const fetchData = async () => {
 // Function to login using POST request
 export const login = async (username, password) => {
   try {
-    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, {  
+    const response = await axios.post(`${API_URL}/api/auth/login`, {  
       username,
       password,
     });
